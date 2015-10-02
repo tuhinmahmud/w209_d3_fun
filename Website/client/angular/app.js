@@ -7,13 +7,13 @@ var myApp = angular.module('myApp',['ngRoute']);
 myApp.config(function($routeProvider,$locationProvider){
 	$routeProvider
 		.when('/',{
-			templateUrl: 'partials/add.html',
-			controller: 'usersListCtrl'
+			templateUrl: 'partials/home.html',
+			controller: 'locsCtrl'
 		})
-		.when('/edit/:userId',{
-			templateUrl: 'partials/edit.html',
-			controller: 'usersDetailCtrl'
-		})
+		// .when('/edit/:userId',{
+		// 	templateUrl: 'partials/edit.html',
+		// 	controller: 'usersDetailCtrl'
+		// })
 		.otherwise({
 			redirectTo: '/'
 		});
