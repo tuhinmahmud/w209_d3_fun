@@ -17,11 +17,23 @@ sudo mongod
 ```
 ####Go to repository folder and load data into MongoDB
 ```
-python data/load.py data/test_data.txt
+#two arugments are needed (1) the datafile and (2) boolean value for whether to remove data from existing database
+python data/load.py data/test_data.txt T
 ```
-####Start Node server (note: you must do have already started your MongoDB server at this point)
+####Check if data loaded properly by starting Mongo client to check
 ```
-mongod website/server.js
+mongo
+```
+####Enter these commands to see if data exists properly
+```
+use w209project
+db.locations.count()   #this should return value of 10
+db.locations.find({}).pretty()   #this should return all the values being stored
+```
+
+####Once confirm data ok, go to new terminal window and start Node server (note: you must do have already started your MongoDB server at this point)
+```
+nodemon website/server.js
 ```
 ####Open web browser and go to following link to view website
 http://localhost:8000/
