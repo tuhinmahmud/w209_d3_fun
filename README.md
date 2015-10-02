@@ -19,6 +19,8 @@ sudo mongod
 ```
 #two arugments are needed (1) the datafile and (2) boolean value for whether to remove data from existing database
 python data/load.py data/test_data.txt T
+
+#you may need to install pymongo package (just do "pip install pymongo")
 ```
 ####Check if data loaded properly by starting Mongo client to check
 ```
