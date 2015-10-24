@@ -54,11 +54,10 @@ Here's a few examples:
 18,39.974893,136.331959,467,2008-08-20,12:10:35,NA
 18,39.974903,126.331965,466,2008-08-20,12:10:37,subway
 18,31.97492,136.331962,466,2008-08-20,12:10:39,subway
-
 ```
 Then, wihtin the "Data" folder, run: 
 ```
-!python load.py test_data.txt T all
+python load.py test_data.txt T all
 ```
 Please note that "load.py" takes in 3 arguments:
 - 1st Argument: filename of the data text file to be loaded (eg. test_data.txt) 
