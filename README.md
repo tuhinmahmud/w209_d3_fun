@@ -29,15 +29,20 @@ mongo
 ####Enter these commands to see if data exists properly
 ```
 use w209project
-db.locations.count()   #this should return value of 10
-db.locations.find({}).pretty()   #this should return all the values being stored
+db.getCollectionNames()  #this return the list of colletions (there should only be "locs" colletion there)
+db.locs.count()   #this should return value of number of counts
+db.locs.find({}).pretty()   #this should return all the values being stored
 ```
 
 ####Once confirm data ok, go to new terminal window and start Node server (note: you must do have already started your MongoDB server at this point)
 ```
-nodemon website/server.js
+nodemon Website/server.js
 ```
 ####Open web browser and go to following link to view website
 http://localhost:8000/
+
+####Loading data into database
+Please go to https://github.com/maktrix16/w209_d3_fun/tree/master/Data
+
 
 
